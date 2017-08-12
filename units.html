@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>UNITS (and other math stuff you need to know)</h1>
+
+<hr />
+
+<h2>SCIENTIFIC NOTATION AND PREFIXES</h2>
+
+<p>To start off, I presume you already know how to do some basic operations such as multiplication and division. 
+The next thing we need to know are units and prefixes. In basic math classes, you usually don't need units for most 
+problems - what you get is usually unitless. However, in the real world, you have to use units, otherwise who
+will know what you are talking about? For instance, if your answer is five, people will be asking "five what? Five 
+sheep? Five apples? Five movies? Five rockets that launch into outer space to attack against aliens?"</p>
+
+<p>So point one: It is important to label your units. Put a word after you write down the number to let 
+everyone know what you're talking about. It's very helpful!</p>
+
+<p>Second, it is important to know scientific notation. This is usually expressed as a 10 with a tiny number on 
+the upper right hand side, known as a superscript.</p>
+
+<table>
+  <tr>
+    <th>Scientific notation</th>
+    <th>Full number displayed</th>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>12</sup></td>
+    <td>1000000000000</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>9</sup></td>
+    <td>1000000000</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>6</sup></td>
+    <td>1000000</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>3</sup></td>
+    <td>1000</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>1</sup></td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-1</sup></td>
+    <td>0.1</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-2</sup></td>
+    <td>0.01</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-6</sup></td>
+    <td>0.000001</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-9</sup></td>
+    <td>0.000000001</td>
+  </tr>
+</table>
+
+<p>You should see something going on here, the number the superscript says - that is the number of zeroes after the
+number one if positive, and the number of zeros before the one if the superscript is negative. You should get used 
+this notation - it will help you greatly in your life (I hope).</p> 
+
+<hr />
+
+<p>Example: Write 10<sup>-4</sup> in full. How do you write 10000 in scientific notation?</p>
+
+<p>Answer: 0.0001. Remember, there are four zeros before the one and the superscript is negative. 10<sup>4</sup> for
+the second question. Four zeroes after the one.</p>
+
+<hr />
+
+<p>Now, our next topic is to learn prefixes. These are useful in the realm of science. You have your unit, and you 
+simply insert your prefix in front. Let us explore a little more:</p>
+
+<table>
+  <tr>
+    <th>Scientific notation</th>
+    <th>Prefix</th>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>12</sup></td>
+    <td>-tera...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>9</sup></td>
+    <td>-giga...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>6</sup></td>
+    <td>-mega...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>3</sup></td>
+    <td>-kilo...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-1</sup></td>
+    <td>-deci...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-2</sup></td>
+    <td>-centi...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-3</sup></td>
+    <td>-milli...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-6</sup></td>
+    <td>-micro...unit</td>
+  </tr>
+  <tr>
+    <td class="unitright">10<sup>-9</sup></td>
+    <td>-nano...unit</td>
+  </tr>
+</table>
+
+<p>So if you had 10<sup>-6</sup> grams of pollutants, that would be one microgram. If you had 10<sup>9</sup>
+seconds to do your homework, that would be one gigasecond (which is very, very long. Maybe your homework would be 
+due in about 31 or 32 years if this actually happened?). It would be useful to play around with your prefixes 
+and scientific notation and to get good at knowing how to work it. This can be a useful skill for life.</p>
+
+<h2>DIMENSIONAL ANALYSIS</h2>
+
+<p>Before starting this section, make sure you have a calculator, preferably scientific or graphing, or a calculator 
+on your computer. Be sure you know how to use it or you have a manual on how to perform calculations.</p>
+
+<p>We will need to be proficient at converting units if we are to fully understand how to work with air pollutants.
+See the drawing below to learn about the "factor-label" method (also called the "chain-link") method:</p>
+
+
+picture cannot be shown
+
+<p>Now let's work out an example. How many seconds are there in seventeen days?</p>
+
+<p>$(17\:days)\left(\frac{24\:hours}{1\:day}\right)\left(\frac{60\:minutes}{1\:hour}\right)\left(\frac{60\:seconds}{1\:minute}\right) =\:?$</p>
+
+<p>When work it out, you should get 1,468,800 seconds.</p>
+
+<p>Alright, let's have a try again. How many feet are there in 5 centimeters? 1 meter is approximately equal to 3.28 feet.</p>
+
+<p>$(5\:cm)\left(\frac{1\:m}{100\:cm}\right)\left(\frac{3.28\:feet}{1\:m}\right) =\:?$</p>
+
+<p>The answer is 0.164 feet. Now let's move on to rates.</p>
+
+<p>Let us say there is a bathroom facuet that has a sink flow rate of 1.2 gallons per minute. Convert this to 
+liters per second.</p>
+
+<p>$\left(\frac{1.2\:gallon}{1\:minute}\right)\left(\frac{3.785\:L}{1\:gallon}\right)\left(\frac{1\:minute}{60\:s}\right) =\:?$</p>
+
+<p>The answer is about 0.076 liters per second.</p>
+
+<p>Before proceeding on, it is useful to look up on the internet "Dimensional Anaylsis" and to do several problem
+associated on other sites if you are still not feeling comfortable. Dimensional anaylsis is a critical skill which
+one will need to understand certain material on this site.</p>
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>The Gaussian Plume</h1>
+
+<p>A better model to calculate the concentration of pollutants which is more sophisticated than the box model
+ is the Gaussian Plume Model. The Gaussian Plume Model functions by using 
+concepts of statistics, physics, and other stuff. Take a glance at the horrendous picture below (just a glance, 
+don't analyze it in strict detail):</p>
+
+</div>
+
+<div id="gallery">
+<img src="images/plume.jpg" />
+</div>
+
+<div id="basis">
+
+<p>WHAT IN THE WORLD IS THAT?</p>
+
+<p>Well, it's an outline of the Gaussian Plume equation. It is 
+some very big scary looking equation that estimates pollutant concentrations
+at a certain point from an emissions source. The basic (which doesn't seem so basic) formula for the Gaussian Plume is </p>
+
+<p>$C(x,y,z) = \left(\frac{Q}{U}\right) \left(\frac{1}{2\pi\sigma_{y}\sigma_{z}}\right)
+e^{\left(\frac{-y^{2}}{2\sigma_{y}^{2}}\right)}\left[e^{\left(\frac{-(z-H)^{2}}{2\sigma_{z}^{2}}\right)} + e^{\left(\frac{-(z+H)^{2}}{2\sigma_{z}^{2}}\right)} \right].$</p>
+
+<p>This is the main equation of this page (and a rather intimidating one at that), so let's break it down.</p>
+
+<p>We start with a smokestack that is developing a plume. Look at 1) and the green box. There are 3 
+axes - the x-axis, which is left to right, the y-axis, which is point toward you and away from you,
+and the z-axis, which stands for the altitude. The green box shows what happens in the y-axis. The
+concentration is the greatest in the center line, while y and $\sigma_{y}$ respresent the deviation
+of how far the plume travels along the y-axis. There is wind speed blowing, and the formula modelers 
+derived is that green formula in the black box in the #1 dotted green box (yes we have boxes in boxes). 
+</p>
+
+<p>We can then do something similar to the z-axis, but there becomes a problem. We have to adjust
+the z-axis formula to (account for the source being raised from the ground - the default value
+of altitude where the concentrations emit usually doesn't begin at zero). Look at the left side
+in the picture. We set H = h<sub>s</sub> (the stack height) + h<sub>e</sub> (the max height
+at which the plume rises). This is inputted into the equation and modifies it. We must also account for 
+every single pollutant not being deposited on the ground - so the modelers used a "reflection" 
+metaphor to account for this.  You can see a mirror image across of the surface line. They also accounted
+for this by adding an additional term, but instead of inputting z - H, it's z + H (hence, the
+reflection). See the red equation after the adjustment (Look at 2).  </p>
+
+<p>When we get all this, we get the Gaussian Plume equation.</p>
+
+<p>$C(x,y,z) = \left(\frac{Q}{U}\right) \left(\frac{1}{2\pi\sigma_{y}\sigma_{z}}\right)
+e^{\left(\frac{-y^{2}}{2\sigma_{y}^{2}}\right)}\left[e^{\left(\frac{-(z-H)^{2}}{2\sigma_{z}^{2}}\right)} + e^{\left(\frac{-(z+H)^{2}}{2\sigma_{z}^{2}}\right)} \right],\:where$ (!)</p>
+
+<ul>
+<li>$Q=emission\:rate$</li>
+<li>$u=wind\:speed$</li>
+<li>$\sigma_{y}=y\:coefficient$</li>
+<li>$\sigma_{z}=z\:coefficient$</li>
+<li>$y=length\:of\:interest\:of\:y$</li>
+<li>$z=height$</li>
+<li>$H=stack\:of\:height + plume\:height$</li>
+</ul>
+
+<p>To find the y and z coefficients (also known as dispersion coefficients), you will need a manual. On this page,
+the necessary coefficients will be given to you. You can look up dispersion coefficients online (search 
+"Gaussian Plume dispersion coefficents"). For instance, the page 
+http://www.mne.psu.edu/cimbala/me433/Lectures/Tables_for_Gaussian_Plume_Model.pdf has an example of how to find 
+it when it's not given. The coefficients vary with insolation, wind speed, clouds...the value honestly depends 
+on the meterological conditions. </p>
+
+<hr />
+<p>EXAMPLE: Calculate the expected concentration near the ground (z=0) if the wind speed (u)
+is 4 m/s, $\sigma_{y}$ = 150 m, $\sigma_{z}$ = 90 m (these coefficients, if you look in a reference table, 
+should coincide with a moderately sunny day, probably Class B), and the stack height is 50 meters
+where the plume rises 30 m above the plume. Assume we have no interest 
+in the y-axis (cross-axis), and let y = 0. The emission rate (Q) is 140 g/s.</p>
+
+<p>So H = H<sub>s</sub> + H<sub>e</sub>
+= 50 m + 30 m = 80 m, and:</p>
+
+<p>$C(x,y,z) = \left(\frac{Q}{U}\right) \left(\frac{1}{2\pi\sigma_{y}\sigma_{z}}\right)
+e^{\left(\frac{-y^{2}}{2\sigma_{y}^{2}}\right)}\left[e^{\left(\frac{-(z-H)^{2}}{2\sigma_{z}^{2}}\right)} + e^{\left(\frac{-(z+H)^{2}}{2\sigma_{z}^{2}}\right)} \right]$</p>
+
+<p>$C(x,y,z) = \left(\frac{140\:g/s}{4\:m/s}\right) \left(\frac{1}{2\pi(150\:m)(90\:m)}\right)
+e^{\left(\frac{-0^{2}}{2(150\:m)^{2}}\right)}\left[e^{\left(\frac{-(0\:m-80\:m)^{2}}{2(90)^{2}}\right)} + e^{\left(\frac{-(0\:m+80\:m)^{2}}{2(90)^{2}}\right)} \right]$</p>
+
+<p>$C(x,y,z) = 5.5 \cdot 10^{-4} g/m^{3}$</p>
+<hr />
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

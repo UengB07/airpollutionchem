@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>ACID RAIN (OR MORE ACCURATELY, ACID DEPOSITION)</h1>
+
+<h2>Some Primers</h2>
+
+<p>Before we can talk about acid rain, we have to get a few things out of the way first. First - we need to 
+discuss pH.</p>
+
+<p>pH stands for "potential of hydrogen", and is a measure to see how acidic (or basic; non-acidic) something 
+is. Items with a pH less than 7.0 are considered acidic. Items with a pH greater than 7.0 are considered basic.
+Items with a pH of 7.0 are neutral. pH is on a log scale - the formula for pH is:</p>
+
+<p>pH = -log[H+]</p>
+
+<p>What you need to calculate the pH is the H+ or hydrogen ion concentration. Then you get a calculator, take 
+the negative log (hopefully you know how to do that on your calculator), and there's your pH. In the usual case
+[H+] ions are usually measured in moles per liter, or molar (M). </p>
+
+<hr />
+<p>EXAMPLE:</p>
+
+<p>Calculate the pH if you have 7 x 10<sup>-8</sup> hydrogen ions in a solution.</p>
+<ul>
+<li>pH = -log[H+]</li>
+<li>pH = -log[7 x 10<sup>-8</sup>]</li>
+<li>pH = -(-7.15)</li>
+<li>pH = 7.15</li>
+</ul>
+
+<p>The pH is in between 7.1 and 7.2. It's greater than 7.0, so it's slightly basic.<p>
+
+<p>Of course, it's good to do the reverse. How much [H+] is in a solution with a pH of 7.15?</p>
+<ul>
+<li>pH = -log[H+]</li>
+<li>7.15 = -log[H+]</li>
+<li>-7.15 = log[H+]</li>
+<li>10<sup>-7.15</sup> = 10<sup>log[H+]</sup></li>
+<li>7 x 10<sup>-8</sup> M = [H+]</li>
+</ul>
+
+<hr/ >
+
+<p>Now, the second thing we need to discuss is the concept of chemical equilibrium. We briefly saw it in the More Basic 
+Chemistry section in the prerequisites section. What we call equibrium constants contain important information 
+about the reaction's equilibrium. An equilibrium constant is defined (in general) as the quotient of the 
+product of the concentration of the products, each product having a power to the number of molecules involved, 
+over the product of the concentration of the reactants, each reactant having a power to the number of 
+molecules involved only when the system is in proper equilibrium, if it is not, then this is the quotient.</p>
+
+<p>Wait, what? This may seem like a confusing definition, but it looks prettier mathwise. Consider the 
+reaction aA + bB --> cC + dD. Then the equilibrium constant (only works if the 
+system is in equilibrium) is (denoted by a K<sub>eq</sub>):</p>
+
+<p>$K_{eq} = Products/Reactants =  \frac{[A]^{a}[B]^{b}}{[C]^{c}[D]^{d}}$</p>
+
+<p>If we had aA + bB --> cC it would be still products over reactants (also the corresponding number 
+of molecules are the exponents)</p>
+
+<p>$K_{eq} = Products/Reactants =  \frac{[A]^{a}[B]^{b}}{[C]^{c}}$</p>
+
+<p>For instance, the Haber process (an agricultural process) at equilibrium involves the reaction N<sub>2</sub> + 3H<sub>2</sub>
+--> 2NH<sub>3</sub>. Writing an equilibrium constant for this: </p>
+
+<p>$K_{eq} = Products/Reactants = \frac{[NH_{3}]^{2}}{[N_{2}][H_{2}]^{2}}$</p>
+
+<p>The third and final thing we need to discuss is something called Henry's law. This law states that a 
+certain amount of a gas dissolved in a given type of liquid is proportional to the partial pressure
+of the gas in equilibrium with the liquid, or:</p>
+
+<p>[Compound in liquid form] = H<sub>compound</sub>[Compound in gas form.]</p>
+
+<p>...where H<sub>compound</sub> is the Henry constant for that compound. You can look up Henry 
+constants for compounds on the internet or in a reference book.</p>
+
+<p>A last thing to note, is that when using this, concentrations can be expressed as pressures (more specifically,
+partial pressures). To convert to pressures, usually some number ppm means that number x 10<sup>-6</sup> atm, some number ppb means
+that number x 10<sup>-9</sup> atm, and some number ppt means that number x 10<sup>-12</sup> atm. It's best to work 
+out an example to see what I mean.</p>
+
+<hr />
+<p>EXAMPLE: The Henry's law constant for the sulfur dioxide gas is 1.23 M/atm. Consider the average concentration of 
+sulfur dioxide in the air to be 5 ppb. Calculate the expected liquid concentration of sulfur dioxide.</p>
+
+<p>We have:</p>
+<p>[Compound in liquid form] = H<sub>compound</sub>[Compound in gas form.]</p>
+<p>[SO<sub>2 (l)</sub>] = H<sub>SO2</sub>[SO<sub>2 (g)</sub>]</p>
+<p>[SO<sub>2 (l)</sub>] = (1.23 atm)[5 ppb]</p>
+<p>[SO<sub>2 (l)</sub>] = (1.23 atm)[5 x 10<sup>-9</sup> atm]</p>
+<p>[SO<sub>2 (l)</sub>] = 6.2 x 10<sup>-9</sup> M</p>
+<hr />
+
+<h2>OCEAN ACIDIFICATION</h2>
+
+<p>First, instead of acid rain, we will use acid deposition, because it's not exactly that the rain suddenly 
+becomes this big burning poisonous liquid that destroys everything in its path and comes down catastrophically. 
+ Deposition is a better scientific term and is hopefully a less ominous 
+one. Still - we begin our study with ocean acidification, which can damage coral reefs and beautiful ecosystems.</p>
+
+<p>We humans (and other organisms) release carbon dioxide into the environment. You may have heard all 
+the craze about carbon dioxide being a greenhouse gas. Well, it also helps (indirectly) acidify our oceans,
+which is not good for some living creatures under the sea. So we can start with a molecule of carbon dioxide,
+and follow it to some water in the air. The carbon dioxide "deposits" on "the water" and we get a weird compound:</p>
+
+<p>$CO_{2 (g)} +H_{2}O_{(l)}$ ⇌ $CO_{2} \cdot H_{2}O_{(aq)}$ (1) (NOTE: $CO_{2} \cdot H_{2}O_{(aq)}$ is also denoted as H<sub>2</sub>CO<sub>3</sub>)!</p>
+
+<p>Now, this weird compound-complex-hydrate thingy gets involved with another equilbrium reaction. It 
+decomposes into the bicarbonate ion (HCO<sub>3</sub><sup>-</sup>) and a hydrogen ion to help acidify 
+the ocean (everything from here on out is aqueous):</p>
+
+<p>$CO_{2} \cdot H_{2}O_{(aq)}$ ⇌ $HCO_{3}^{-} + H^{+}$ (2)</p>
+
+<p>The bicarbonate further decomposes into the carbonate ion, throwing a proton to help acidify the ocean:</p> 
+
+<p>$HCO_{3}^{-}$ ⇌ $CO_{3}^{2-} + H^{+}$ (3)</p>
+
+<p>OK. Let's write some equilbirium constants for reactions 1 and 2. Remember: products over reactants. Try it yourself.
+When done, compare to these equations.</p>
+
+<p>$K_{1} = \frac{[H^{+}][HCO_{3}^{-}]}{[H_{2}CO_{3}]}$</p>
+
+<p>$K_{2} = \frac{[H^{+}][CO_{3}^{2-}]}{[HCO_{3}^{-}]}$</p>
+
+<p>The total carbon dioxide dissolved turns out to be, after some derivation we will not cover here: </p>
+
+<p>[Total CO<sub>2</sub> dissolved] = [H<sub>2</sub>CO<sub>3</sub>] + [HCO<sub>3</sub><sup>-</sup>] + [CO<sub>3</sub><sup>2-</sup>]</p>
+
+<p>We may assume that the [H<sub>2</sub>CO<sub>3</sub>] is equivalent to [CO<sub>2 (l)</sub>], so:</p>
+
+<p>[Total CO<sub>2</sub> dissolved] = [CO<sub>2 (l)</sub>] + [HCO<sub>3</sub><sup>-</sup>] + [CO<sub>3</sub><sup>2-</sup>]</p>
+
+<p>By Henry's Law, </p>
+
+<p>[Total CO<sub>2</sub> dissolved] = H<sub>CO2</sub>[CO<sub>2 (g)</sub>] + [HCO<sub>3</sub><sup>-</sup>] + [CO<sub>3</sub><sup>2-</sup>]</p>
+<p>[Total CO<sub>2</sub> dissolved] = H<sub>CO2</sub>P<sub>CO2</sub> + [HCO<sub>3</sub><sup>-</sup>] + [CO<sub>3</sub><sup>2-</sup>]</p>
+
+<p>Now go back to our K1 equation. Isolate the bicarbonate (that HCO<sub>3</sub><sup>-</sup>) on one side of the equation.
+Now, plug that in into our total carbon dioxide dissolved equation. You should get:</p>
+
+<p>$[Total\:CO_{2}\:dissolved] = H_{CO_{2}}P_{CO_{2}} + \frac{[H_{2}CO_{3}]K_{1}}{[H^{+}]} + [CO_{3}^{2-}]$</p>
+
+<p>We already saw how [H<sub>2</sub>CO<sub>3 (aq)</sub>] is equal to [CO<sub>2 (l)</sub>]. So we can use Henry's Law
+to get: </p>
+
+<p>$[Total\:CO_{2}\:dissolved] = H_{CO_{2}}P_{CO_{2}} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}}{[H^{+}]} + [CO_{3}^{2-}]$</p>
+
+<p>Go to the K<sub>2</sub> equation. Isolate the carbonate on one side. Then plug it back into our total dissolved
+carbon dioxide equation. We get: </p>
+
+<p>$[Total\:CO_{2}\:dissolved] = H_{CO_{2}}P_{CO_{2}} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}}{[H^{+}]} + \frac{[HCO_{3}^{-}]K_{2}}{[H^{+}]}$</p>
+
+<p>Now substitute the $\frac{H_{CO_{2}}P_{CO_{2}}K_{1}}{[H^{+}]}$ in for the HCO<sub>3</sub><sup>-</sup> concentration 
+and simplify. You should get:</p>
+
+<p>$[Total\:CO_{2}\:dissolved] = H_{CO_{2}}P_{CO_{2}} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}}{[H^{+}]} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}K_{2}}{[H^{+}]^{2}}$ (A) (!)</p>
+
+<p>Equation (A) is a critical equation. With this, we can measure the [H+] in water and therefore, the pH. 
+Unfortunately, this equation obviously requires a calculator, and a powerful one at that to achieve a very
+accurate answer. If I know everything except for [H+] (and am trying to solve for that unknown), I usually
+use a computer to solve for [H+]. You may want to brush up on your algebra skills if you want to do the calculations by hand.
+It is entirely possible to do with a calculator in hand, but it can be a bit boring (and involves having all the fractions
+have a common denominator, and, heck, why don't we just try it:</p>
+
+<hr />
+
+<p>EXAMPLE (Are your algebra skills ready to go?)</p>
+
+<p>Solve for [H+] in equation (A)!</p>
+
+<p>So we have this terrifying equation:</p>
+
+<p>$[Total\:CO_{2}\:dissolved] = H_{CO_{2}}P_{CO_{2}} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}}{[H^{+}]} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}K_{2}}{[H^{+}]^{2}}$ (A)</p>
+
+<p>What did we learn in school? Common denominators! We have to find a common denominator -> [H+]<sup>2</sup> in this 
+case. Don't forget when we have it, we HAVE TO multiply the numerators with the number in their respective denominators
+as well. Start by moving one term to the other side:</p>
+
+<p>$[Total\:CO_{2}\:dissolved] - H_{CO_{2}}P_{CO_{2}} =   \frac{H_{CO_{2}}P_{CO_{2}}K_{1}}{[H^{+}]} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}K_{2}}{[H^{+}]^{2}}$</p>
+	
+	
+<p>Multiply through by a common denominator:</p>
+
+<p>$\frac{[H^{+}]^{2}[Total\:CO_{2}\:dissolved] - H_{CO_{2}}P_{CO_{2}}}{[H^{+}]^{2}} =   \frac{H_{CO_{2}}P_{CO_{2}}K_{1}[H^{+}]}{[H^{+}]^{2}} + \frac{H_{CO_{2}}P_{CO_{2}}K_{1}K_{2}}{[H^{+}]^{2}}$</p>
+
+<p>Simplify:</p>
+
+<p>$[H^{+}]^{2}[Total\:CO_{2}\:dissolved]-H_{CO_{2}}P_{CO_{2}}=H_{CO_{2}}P_{CO_{2}}K_{1}[H^{+}]+H_{CO_{2}}P_{CO_{2}}K_{1}K_{2}$</p>
+
+<p>You're still going to probably need a computer/calculator. But at least you can now solve for [H+], you have a quadratic equation.
+Hopefully you know how to solve one by hand (but you don't really need to, you can use a computer or something). </p>
+
+<hr />
+
+<p>A MUCH BETTER WAY OF FINDING [H+]</p>
+
+<p>OK, so that wasn't pretty. Fortunately for us, there is an easier way. In actuality, concentrations of 
+carbonate, hydroxide anions and other stuff are rather small for the most part, and bicarbonate becomes only the major 
+contributor to H+. In fact, it's such a contributor that it usually almost equals the H+ concentration. So we 
+make the process a lot simpler by allowing [H+] = [HCO<sub>3</sub><sup>-</sup>].</p>
+
+<p>$[H^{+}]=[HCO_{3}^{-}]=\frac{H_{CO_{2}}P_{CO_{2}}K_{1}}{[H^{+}]}$</p>
+<p>$[H^{+}]^{2}=H_{CO_{2}}P_{CO_{2}}K_{1}$</p>
+<p>$[H+]=\sqrt{H_{CO_{2}}P_{CO_{2}}K_{1}}$</p>
+<p>$pH = -log[H+]$</p>
+<p>$pH = -log[\sqrt{H_{CO_{2}}P_{CO_{2}}K_{1}}]$ (B)</p>
+
+<p>This is way better than the junk we did previously. Equation (B) is the much prettier form of Equation (A) 
+under the assumption that bicarbonate is the main ion playing a part in the acidity balance, which it usually
+is. This equation is much nicer and more convenient than (A), and I like this one. It doesn't always work - 
+but it usually does under some right assumptions.</p>
+
+<hr />
+<p>EXAMPLE:</p>
+
+<p>Calculate the pH of rainwater if the mixing ratio of carbon dioxide is 400 ppm (which it is, as of 2016). 
+Henry's constant for carbon dioxide is 0.034 M/atm, K<sub>1</sub> is 4.3 x 10<sup>-7</sup> M.</p>
+
+<p>$pH = -log[\sqrt{H_{CO_{2}}P_{CO_{2}}K_{1}}]$</p>
+
+<p>$pH = -log[\sqrt{(0.034\:M/atm)(400\cdot10^{-6} atm)(4.3\cdot10^{7} M)}]$</p>
+
+<p>$pH = 5.6$</p>
+
+<p>You can clearly see natural rainwater is already acidic (even though you don't feel burns when it splashes on you)</p>
+
+<p>Calculate the pH of rainwater if the mixing ratio of carbon dioxide is 800 ppm (double our current atmospheric carbon dioxide levels!). 
+Henry's constant for carbon dioxide is 0.034 M/atm, K<sub>1</sub> is 4.3 x 10<sup>-7</sup> M.</p>
+
+<p>$pH = -log[\sqrt{H_{CO_{2}}P_{CO_{2}}K_{1}}]$</p>
+
+<p>$pH = -log[\sqrt{(0.034\:M/atm)(800\cdot10^{-6} atm)(4.3\cdot10^{7} M)}]$</p>
+
+<p>$pH = 5.5$</p>
+
+<p>Hopefully this won't kill you. Still, even slight pH changes can affect the organisms around us.</p>
+
+
+<hr />
+
+<h2>SULFUR & COAL</h2>
+
+<p>I have been debating to myself whether to cover detailed calculations regarding sulfur. When it comes to sulfur playing 
+a role in acid rain, calculating the pH is much more complicated because in these areas you often have
+a lot of contributing factors that could interfere: ammonium, nitrate, etc...so I will just cover 
+the main reactions which contribute to sulfuric acid rain. Know that these are not the only reactions
+which mess up with the rainwater's pH. Nevertheless, sulfur dioxide gas is a BIG contributor to 
+acid rain, and is perhaps one of the most important compounds that make our rain too acidic. 
+Suflur dioxide comes from volcanoes, coal plants, smelters, diesel vehicles and some natural environments/organisms
+that produce hydrogen sulfide and dimethyl sulfide. So let's start. </p>
+
+<hr />
+
+<p>Some time ago, there was acid rain damaging natural environments.. There still is. But when the 
+damage occured years ago, people became angry and scientists got curious. What rain could be killing 
+the forests? </p>
+
+<p>Although there are many things that could affect a rainwater's pH, scientists looked toward
+sulfur dioxide. At first, it was thought that sulfur dioxide reacted with the OH radical to 
+form HOSO<sub>2</sub>, where all players are a gas. The newly formed HOSO<sub>2</sub> reacts
+with molecular oxygen to form HO<sub>2</sub> + SO<sub>3</sub> . The SO<sub>3</sub> then 
+reacts with liquid water to form liquid sulfuric acid (H<sub>2</sub>SO<sub>4</sub>). In general,</p>
+
+<ul>
+<li>OH + SO<sub>2</sub>--> HOSO<sub>2</sub></li>
+<li>HOSO<sub>2</sub> + O<sub>2</sub> --> HO<sub>2</sub> + SO<sub>3</sub></li>
+<li>SO<sub>3</sub> + H<sub>2</sub>O<sub>(l)</sub> --> H<sub>2</sub>SO<sub>4 (l)</sub></li>
+</ul>
+
+
+<p>But...</p>
+
+<p>This mechanism was way too slow and didn't seem favorable. So they crossed this out, and kept thinking.
+It turns out the proper reaction mechanism was:</p>
+
+<ul>
+<li>SO<sub>2 (g)</sub> + H<sub>2</sub>O<sub>(l)</sub> ⇌ H<sub>2</sub>SO<sub>3 (l)</sub> (sulfurous acid)</li>
+<li>H<sub>2</sub>SO<sub>3 (l)</sub> ⇌ H<sup>+</sup> + HSO<sub>3</sub><sup>-</sup> (bisulfite)</li>
+<li>HSO<sub>3</sub><sup>-</sup> + O<sub>3</sub> ⇌ H<sup>+</sup> + SO<sub>4</sub><sup>2-</sup> (sulfate ion) + O<sub>2</sub></li>
+<li>SO<sub>3</sub><sup>-</sup> + H<sub>2</sub>O<sub>2</sub> ⇌ H<sup>+</sup> + SO<sub>4</sub><sup>2-</sup> + liquid water</li> 
+<li>Some free sulfate ions and hydrogen ions form aqueous sulfuric acid during this mechanism</li>
+</ul>
+
+<p>It turns out that this is the mechanism for sulfuric acid rain. Again, 
+this is complicated because ozone is involved, and we already saw how everything
+interferes with ozone in the tropospheric section. There also could be 
+reactions which lower the amount of hydrogen peroxide. Not only that, some sources of ions,
+like calcium from calcium carbonate (in limestone) act as buffers that can reduce
+the acidity. The above mechanism alone could be investigated for a long time; just 
+know this is the main mechanism of sulfuric acid rain.</p>
+
+<p>So, what about acid rain involving nitrogen? The main reaction which forms nitric acid that 
+can lower pH of rainwater is one you already learned about in the tropospheric section. It's
+OH + NO<sub>2</sub> --> HNO<sub>3</sub>. (Some sources of NOx also come from lightning, bacteria and biomass).
+You can have nitric acid rain, you can have sulfuric acid rain. Take your pick...</p>
+
+<hr />
+<p>EXPLORATION: (1) Research acid fog. Read some material about it. (2) Research buffers for acid rain. What 
+are some good ones? (3) Research ocean acidification/coral reef acidity. What did you find out? Do you 
+think clownfish or sea anenomes could go endagered?</p>
+<hr />
+
+
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him. </p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

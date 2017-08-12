@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>PRESSURE PROFILE OF THE ATMOSPHERE</h1>
+
+<p>Please take your time to look at the picture below.</p>
+
+</div>
+
+<div id="gallery">
+
+<img src="images/profile.jpg" />
+
+</div>
+
+<div id="basis">
+
+<p>Follow the turquoise (torquouise? turquiouse? anyway, the dark kind-of-looks-blue) line which starts from 0 degrees Celsius and goes all the way to the left axis. This is the general picture of how pressure decreases in the atmosphere. For our purposes,
+we use millibars (mb) and atmospheres (atm) for our discussions. Note that 1 atmosphere of pressure = 1013.25 millibars.</p>
+
+<p>Pressure decreases exponentially as we go up. It only takes 10 km of the atmosphere to reach quite a low pressure. As you go up, pressure doesn't vary that much. The most variation of pressure 
+happens in the troposphere. This also implies most molecules are found in the troposphere. Lighter gases can travel 
+more efficiently to the upper atmosphere, and only the lightest gases, such as hydrogen, escape.</p>
+
+<p>We haven't created an accurate mathematical formula that can discuss the pressure change in the entire atmosphere, but it turns out we can derive an approximate equation, called
+the barometric law:</p>
+
+$P_{z} = P_{0}e^{-\frac{z}{H}}$
+
+<p>where P<sub>z</sub> is the pressure at the altitude z, P<sub>0</sub> is the pressure at the surface, 
+usually taken to be 1 atm or 1013.25 mb, z is the height, and H is what we call the scale height, which 
+depends on temperature. Different books have different references for the "average" scale height. 
+For our purposes, we will use a value of 8 kilometers. (You may see some scale heights 0.5 km below 
+or above this value in different texts). This formula certainly does not work everywhere, but it is 
+usually a good approximation. Be also sure you know how to use the e button on your calculator. </p>
+
+<hr />
+
+<p>EXAMPLE:</p>
+
+<p>Calculate the air pressure at 3 kilometers. The answer may not be exact, but it is a useful approximation.</p>
+
+<p>$P_{z} = P_{0}e^{-\frac{z}{H}}$</p>
+
+<p>$P_{z} = (1\:atm)e^{-(\frac{3 km}{8 km})}$</p>
+
+<p>$P_{z} = 0.7\:atm$</p>
+
+<p>The answer is about 0.7 atm. Hope your head does not get dizzy at this altitude. You can see the advanced section for a derivation of the
+formula. Keep in mind that the advanced section is for people who know calculus and general physics.</p>
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him..</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

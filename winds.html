@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>THE BOX MODEL</h1>
+
+
+<p>After all that tropospheric/stratospheric/acid rain/profiles of atmospheres/stability mess, 
+we now do something different. 
+At this point, we will begin to develop our models to find concentrations of pollutants. We only focus on two 
+at this site: The Box Model and the Gaussian Plume. There are a few more, but we only cover these models. So 
+let's get started.</p>
+
+<p>We can actually model the average steady-state concentration of pollutants (q) from an area using something called a box model. If we know 
+the average wind speed (u<sub>avg</sub>), the mixing height (z), and the area emission rate (S<sub>A</sub>), we can set the length
+of the box to plug into a formula:</p>
+
+<p>$[q] = \frac{\Delta x\cdot S_{A}}{u_{avg}z}$</p>
+
+</div>
+
+<div id="gallery">
+<img src="images/box.png" />
+</div>
+
+<div id="basis">
+<p>Let's try an example.</p>
+
+<hr />
+<p>EXAMPLE:</p>
+
+<p>There is an urban  surface area of 100 km<sup>2</sup> (treat as a square) with at temperature profile that has an inversion 
+at approximately 600 meters. Use a box model to calculate the average steady-state concentration 
+of pollutants if the average pollutant emissions are 6 x 10<sup>-4</sup> g/m<sup>2</sup>s, and 
+the average wind speed is 5 m/s.</p>
+
+<p>First, we need to get everything in the right units. 100 km<sup>2</sup> can be converted to m<sup>2</sup>,
+if 1 km<sup>2</sup> =  1,000,000 m<sup>2</sup>, then 100 km<sup>2</sup> = 100,000,000 m<sup>2</sup>. Take
+the square root of this to yield 10,000 m. That is our $\Delta x$. We then have:</p>
+
+<p>$[q] = \frac{\Delta x\cdot S_{A}}{u_{avg}z}$</p>
+
+<p>$[q] = \frac{(10000 m)\cdot \left(\frac{6\cdot10^{-4} g }{m^{2}\cdot s}\right)}{(5 \frac{ m}{s})(600 m)}$</p>
+
+<p>$[q]=0.002 \frac{g}{m^{2}\cdot s}$</p>
+
+<hr />
+
+</div>
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

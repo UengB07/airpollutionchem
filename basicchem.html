@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>BASIC CHEMISTRY</h1>
+
+<p>Before getting started, it is important to know some basic chemistry. For the purposes of this site, 
+chemical nomenclature, or simply the naming of chemicals, will not be discussed in detail. Both full
+chemical names and symbols will be given.</p>
+
+<p>On this site, we abbreviate chemical names by using their formulas. For instance, carbon dioxide is 
+CO<sub>2</sub>, nitrogen dioxide is NO<sub>2</sub>, oxygen is O<sub>2</sub>, etc. Names and their corresponding
+symbols will always be given on this site.</p>
+
+<p>Finally, it is important to know what a mol is. The mol basically stands for 6.02 x 10<sup>23</sup> of something.
+For instance, if I had a mol of marbles, I would have 6.02 x 10<sup>23</sup> marbles. We usually correlate 
+mols with atoms and molecules, however. So helium is an individual atom - a mol of that is 6.02 x 10<sup>23</sup> 
+atoms. But carbon dioxide is a molecule (atoms connected to each other), so a mol of 
+carbon dioxide is 6.02 x 10<sup>23</sup> molecules...of carbon dioxide. </p>
+
+<p>Now let's look at a chemical equation:</p>
+
+<p>(n1)A + (n2)B --> (n3)C + (n4)D</p>
+
+<p>A and B stand for the reactants, your starting material; C and D stand for the end products of the reaction. 
+It's quite simple to read, but much harder to investigate every aspect of it. n1, n2, n3, n4 stand for the 
+number of atoms or molecules of each each reactant and product, respectively.</p>
+
+<p>In chemistry we often use the Celsius or the Kelvin temperature scales. It is very rare that we use the Farenheit scale. 
+When you read weather reports in the United States, it will usually be in the Farenheit scale (there can a Celsius right next 
+to the Farenheit number sometimes). We stick to the Celsius, because it helps to give us an easy conversion 
+to Kelvin if we need it. You simply add 273 to the Celsius number to get the Kelvin number, and you subtract 
+273 from the Kelvin number to get the Celsius number. For instance, let us say we had 20 degrees Celsius weather.
+20 + 273 = 293; so the temperature in Kelvin is 293 Kelvin. If we had 300 Kelvin weather, we subtract: 300 - 273 = 
+27 degrees Celsius weather, so that's the weather in Celsius.</p>
+
+<p>One good thing to know is balancing equations. It is not necessary to know this skill on the site, however, 
+it is an imperative skill in general chemistry. While you don't need to know balancing equations on this website,
+I would recommend you up how to balance equations and try a few problems when you have time.</p>
+
+
+<p>What we do need to know, however, is something called mixing ratios. Mixing ratios usually are a measurement
+of concentration - measured in parts per million (ppm), parts per billion (ppb), or parts per trillion (ppt).
+However, chemists usually like to measure concentrations in molecules/cm<sup>3</sup> or mols/liter. So as you can
+see, we will need to find how to interconvert between these two. The important conversion for atmospheric chemistry
+is from molecules/cm<sup>3</sup> to ppm, ppb or ppt and vice versa. This conversion is a little more tricky
+because we need to use something called the ideal gas law.</p>
+
+<p>Pressure x Volume = (number of moles of some chemical) * (R which is a constant) * (Temperature in Kelvin)....or</p>
+
+<p>PV = nRT <--- THE IDEAL GAS LAW</p>
+
+<p>It is important to see that units are consistent: you should have the same units on both sides of the equation.
+R is called the ideal gas constant, which is 0.082 (liters x atm)/(mole x Kelvin).</p>
+
+<p>Again, the conversion is a little tricky. We should work through an example. Let's start with converting
+molecules/cm<sup>3</sup> to ppm, ppb, and ppt.</p>
+
+<hr />
+
+<p>EXAMPLE FOR CONVERTING MOLECULES/CM<sup>3</sup> TO PPM/PPB/PPT:</p>
+
+<p>Let us say we have a 2.1 x 10<sup>12</sup> (molecules ozone)/(cm<sup>3</sup>) in Denver. The air pressure in 
+Denver is about 0.70 atmospheres (atm). (Atmospheres are units of pressure). Calcualte the mixing ratio in ppm,
+ppb, and ppt. Assume the temperature is 25 degrees Celsius. </p>
+
+<p>1. FIND THE GENERAL CONCENTRATION OF AIR IN MOLECULES/CM<sup>3</sup></p>
+
+<p>Let's rearrange some the ideal gas law:</p>
+
+<p>PV = nRT</p>
+<p>$\frac{PV}{RT} = n$ We divide both sides by R and T.</p>
+<p>$\frac{P}{RT} = \frac{n}{V}$ We divide both sides by V.</p>
+
+<p>n/V is our concentration of air. Now we need to find this concentration using the ideal gas law. Remember our temperature conversion:
+25 degrees Celsius + 273 = 298 K.</p>
+
+<p>$\frac{(0.7 atm)}{(\frac{0.082 L \cdot atm}{mol \cdot K})(298 K)} = \frac{n}{V}$</p>
+
+<p>When you calculate the left side of the equation, you should get 0.0286 mols/L. However, it would be more convienient to 
+have it in molecules/cm<sup>3</sup>. There are 6.02 x 10<sup>23</sup> molecules in 1 mol, so we can do conversion here.</p>
+
+<p>$\left(\frac{0.029\:mol}{L}\right)\left(\frac{6.02 \cdot 10^{23}molecules}{1\:mol}\right) = 1.75 \cdot 10^{22} molecules/L$</p>
+
+<p>Also, there are 1000 cm<sup>3</sup> in one liter, so we can do some more conversion:</p>
+
+<p>$\left(\frac{1.75 \cdot 10^{22} molecules}{L}\right)\left(\frac{1 L}{1000\:cm^{3}}\right) = 1.75 \cdot 10^{19} molecules/cm^{3}$</p>
+
+<p>So the general air concentration is  1.75 x 10^{19} molecules/cm<sup>3</sup> at Denver at 0.7 atm and 25 degrees Celsius. </p>
+
+<p>2. CONVERT TO MIXING RATIO.</p>
+
+<p>If you've done dimensional anaylsis but are not used to mixing ratios, this may seem a little odd to you. If you haven't seen
+any of this before, just follow along. ppm, ppb, and ppt are all different. So we'll calculate each:</p>
+
+<p>ppm: The general form of conversion is </p>
+
+<p>$\left(\frac{2.1 \cdot 10^{12} molecules\:ozone}{1\:cm^{3}\:air}\right)\left(\frac{1\:cm^{3}\:air}{1.75 \cdot 10^{19}\:molecules\:air}\right)(10^{6}molecules\:air) = 0.12\:ppm$</p>
+
+<p>ppb: The general form of conversion is:</p>
+
+<p>$\left(\frac{2.1 \cdot 10^{12} molecules\:ozone}{1\:cm^{3}\:air}\right)\left(\frac{1\:cm^{3}\:air}{1.75 \cdot 10^{19}\:molecules\:air}\right)(10^{9}molecules\:air) = 120\:ppb$</p>
+
+<p>ppt: The general form of conversion is:</p>
+
+<p>$\left(\frac{2.1 \cdot 10^{12} molecules\:ozone}{1\:cm^{3}\:air}\right)\left(\frac{1\:cm^{3}\:air}{1.75 \cdot 10^{19}\:molecules\:air}\right)(10^{12}molecules\:air) = 120000\:ppt$</p>
+
+<p>Basically, we first find the general air concentration. Then we find the inverse of it,  multiply that by our chemical 
+concentration that we are trying to convert (the one that the question gives us), and finally multiply that whole thing 
+by a factor (10<sup>6</sup> for ppm, 10<sup>9</sup> for ppb, and 10<sup>12</sup> for ppt).</p>
+
+<p>DOING THE REVERSE:</p>
+
+<p>We'll now do the reverse. What if they give us ppm/ppb/ppt and we want to convert to molecules/cm<sup>3</sup>? Well - let's
+look at this example. </p>
+
+<p>Let us say we have a 0.12 ppm (same as 120 ppb and 120000 ppt) (molecules ozone)/(cm<sup>3</sup>) in Denver. The air pressure in 
+Denver is about 0.70 atmospheres (atm). (Atmospheres are units of pressure). Convert this 
+mixing ratio to molecules/cm<sup>3</sup>. Assume the temperature is 25 degrees Celsius. </p>
+
+<p>1. FIND THE GENERAL CONCENTRATION OF AIR.</p>
+
+<p>Same as step 1 in the previous section! Let's rearrange some the ideal gas law:</p>
+
+<p>PV = nRT</p>
+<p>$\frac{PV}{RT} = n$ We divide both sides by R and T.</p>
+<p>$\frac{P}{RT} = \frac{n}{V}$ We divide both sides by V.</p>
+
+<p>n/V is our concentration of air. Now we need to find this concentration using the ideal gas law. Remember our temperature conversion:
+25 degrees Celsius + 273 = 298 K.</p>
+
+<p>$\frac{(0.7 atm)}{(\frac{0.082 L \cdot atm}{mol \cdot K})(298 K)} = \frac{n}{V}$</p>
+
+<p>When you calculate the left side of the equation, you should get 0.0286 mols/L. However, it would be more convienient to 
+have it in molecules/cm<sup>3</sup>. There are 6.02 x 10<sup>23</sup> molecules in 1 mol, so we can do conversion here.</p>
+
+<p>$\left(\frac{0.029\:mol}{L}\right)\left(\frac{6.02 \cdot 10^{23}molecules}{1\:mol}\right) = 1.75 \cdot 10^{22} molecules/L$</p>
+
+<p>Also, there are 1000 cm<sup>3</sup> in one liter, so we can do some more conversion:</p>
+
+<p>$\left(\frac{1.75 \cdot 10^{22} molecules}{L}\right)\left(\frac{1 L}{1000\:cm^{3}}\right) = 1.75 \cdot 10^{19} molecules/cm^{3}$</p>
+
+<p>So the general air concentration is  1.75 x 10^{19} molecules/cm<sup>3</sup> at Denver at 0.7 atm and 25 degrees Celsius. </p>
+
+<p>2. CONVERT THE MIXING RATIO.</p>
+
+<p>The general form is:</p>
+
+<p>For ppm:</p>
+
+<p>$\left(\frac{0.12\:ppm\:ozone}{10^{6}\:molecules\:air}\right)\left(\frac{1.75 \cdot 10^{19}\:molecules\:air}{1\:cm^{3}\:air}\right) = 2.1 \cdot 10^{12} molecules\:ozone$
+</p>
+
+<p>For ppb:</p>
+
+<p>$\left(\frac{120\:ppb\:ozone}{10^{9}\:molecules\:air}\right)\left(\frac{1.75 \cdot 10^{19}\:molecules\:air}{1\:cm^{3}\:air}\right) = 2.1 \cdot 10^{12} molecules\:ozone$</p>
+
+<p>For ppt:</p>
+
+<p>$\left(\frac{120000\:ppt\:ozone}{10^{12}\:molecules\:air}\right)\left(\frac{1.75 \cdot 10^{19}\:molecules\:air}{1\:cm^{3}\:air}\right) = 2.1 \cdot 10^{12} molecules\:ozone$</p>
+
+<p>The first step is exactly the same for converting both ways, the second step is a little different. Here we find the general
+concentration of air, multiply that by the amount they give us, and divide by the factor (10<sup>6</sup> for ppm, 10<sup>9</sup>
+for ppb...etc).</p>
+
+<p>The calculations done in this example ONLY work for air pollutant concentrations. Do NOT use these for concentrations of pollutants 
+in water!</p>
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

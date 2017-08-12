@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>STABILITY</h1>
+
+<p>In the atmosphere, there is a something called a lapse rate. We already looked what happens to the 
+temperature vs. altitude in the temperature section of prerequisites. It should decrease as we get higher.
+But there are variations to this specific pattern, and the average profile of temperature vs altitude 
+under dry conditions is known as the dry adiabatic lapse rate (DALR). Adiabatic means that no heat is 
+transferred to or from the system and surroundings. The DALR is found to be about -10 degrees Celsius/km. 
+A derivation is given in the advanced section, if you know calculus. If you don't, just ignore the 
+derivation and take the DALR to be -10 degrees Celsius/km.</p>
+
+<p>Of course, the atmosphere isn't always dry, so we have to measure something called the moist 
+adiabatic lapse rate (MALR). The MALR does vary! For our purposes, we will use 
+-6 degrees Celsius/km for the MALR, which is a general good number to use.</p>
+
+<p>Now, let's talk about stability. Take a look  at the image below, where ELR stands for environmental
+lapse rate, or the lapse rate which is observed in the current environment:</p>
+
+</div>
+<div id="gallery">
+<img src = "images/stable.png" />
+</div>
+
+<div id="basis">
+<p>Here, the temperature is 30 degrees Celsius at the surface and 0 degrees celsius at 3,000 m (3 km). So,
+the lapse rate observed or ELR is (T stands for temperature in Celsius, z stands for altitude in km): 
+$ELR = \frac{T_{2}-T_{1}}{z_{2}-z_{1}} = \frac{30 - 20}{0 - 3} = 
+	-3.33...^{o}C/km$</p>
+	
+<p>The magnitude of the value 3.33 Celsius/km is smaller than the DALR's magnitude value of 10 degrees
+Celsius/km. So seeing the ELR > DALR, the atmosphere is stable. This would be the same case when comparing 
+to the moist adiabatic lapse rate, since the magnitude of the value 3.33 Celsius/km is smaller than 
+the MALR's magnitude value of 6.5 Celsius/km.</p>
+
+<p>Now let's take a look at some unstable atmospheres.</p>
+
+</div>
+
+<div id="gallery">
+<img src = "images/unstable.png" />
+</div>
+
+<div id="basis">
+<p>Let us pretend that both these two pictures are 0 degrees Celsius at 2000 m (2 km) and 30 degrees Celsius 
+at the surface. Then:</p>
+
+<p>$ELR = \frac{T_{2}-T_{1}}{z_{2}-z_{1}} = \frac{30 - 0}{0 - 2} = 
+	-15^{o}C/km$</p>
+	
+<p>The magnitude value of -15 degrees Celsius/km is greater than either the magnitudes of 10  (
+the DALR) or 6 (MALR). Therefore, since this ELR value is greater than the DALR and MALR values,
+the atmosphere is unstable. </p>
+
+<p>One final note: You always compare the slopes. Sometimes you can have a tricky scenario like this:</p>
+
+<img src="images/weird.png" />
+
+<p>Follow the black diagonal line (the ELR) to the red line (DALR). The black line then goes in the same direction
+as the red line (DALR) at the DALR. It turns out, that the DALR from the surface until it meets the red line 
+is stable (an "inversion") occurs. When the ELR = DALR, this is a situation known as a neutrally stable 
+situation.</p>
+
+<p>EXPLORATION: Look up the following inversions: marine inversion, subsidence inversion, and 
+radiation inversion. How does each form?</p>
+
+<h2>SMOKESTACK MIXING</h2>
+
+<p>Different atmospheric stabilites lead to different results for a smokestack. For one, if the 
+ELR = DALR, the smokestack spreads vertically and creates a cone. If the ELR > DALR, then the 
+plume from the smokestack spreads horizontally from the top of the stack. From a bird eye's view,
+the top view looks like a fan. If the ELR = DALR, then suddenly for some reason becomes > DALR, 
+an inversion occurs, and the air on top of the smokestack cannot move up. The air is cooler underneath
+the smokestack than the air below, and we get the deadly "fumigator", which will give people a bad day.
+If the ELR is generally < ELR, then the atmosphere is unstable and the smokestack becomes wavy. Finally,
+if we have a profile like the on in our final note from above, we have the plume lofting. Variations of properties
+of smokestack plumes are usually caused by winds, temperature, topography, and the details of the 
+smokestack itself (like the height).</p>
+
+<p>Usually when a temperature inversion occurs, the height of inversion is known as the "mixing" height,
+where pollutants/gases "mix". This is an important point to remember for when you get to the Gaussian plume.</p>
+
+
+</div>
+
+<div id="gallery">
+<img src= "images/smokestack.png" />
+</div>
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

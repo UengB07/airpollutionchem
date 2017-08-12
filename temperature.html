@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>TEMPERATURE PROFILE OF THE ATMOSPHERE</h1>
+
+<p>Please take your time to look at the picture below. What a mess! All this is going on in the atmosphere, for now, let's just concentrate 
+on that red zig zaggy line. This is the temperature profile.</p>
+
+</div>
+
+<div id="gallery">
+
+<img src="images/profile.jpg" />
+
+</div>
+
+<div id="basis">
+
+<p>Let us start at the surface. The usual theme of the atmosphere is, "as you go up, it gets colder." This could be true - but as we will see, this is not really the case. First, we start 
+at the surface with an average temperature of 15 degrees Celsius. Then, the temperature gets colder and colder - that is, until we reach certain height of about 10 km. Now, the interesting 
+stuff happens. </p>
+
+<p>At about 10 km, we enter the stratosphere. Suddenly, a temperature inversion happens - which means that now the pattern of temperature vs. height is going the other way! Why is this?
+Many years ago, a person named Sydney Chapman proposed some interesting reactions which can happen under the right conditions:</p>
+
+<ul>
+<li>O<sub>2</sub> + light --> O + O (1)</li>
+<li>O + O<sub>2</sub> + M --> O<sub>3</sub> + M* (2)</li>
+<li>O<sub>3</sub> + light --> O + O<sub>2 </sub>(3)</li>
+<li>O + O<sub>3</sub> --> 2O<sub>2 </sub>(4)</li>
+</ul>
+
+<p>In words, the reactions are:</p>
+
+<ul>
+<li>Oxygen molecule + light --> Oxygen atom + Oxygen atom (1)</li>
+<li>Oxygen atom + Oxygen molecule + "mediator" --> Ozone + "excited mediator" (2)</li>
+<li>Ozone + light --> Oxygen atom + Oxygen molecule (3)</li>
+<li>Oxygen atom + ozone --> Two oxygen molecules (4)</li>
+</ul>
+
+<p>The stratosphere has the right conditions for these Chapman reactions to occur. The light associated with these reactions is ultraviolet light. M is a "mediator"; this is a molecule, usually molecular oxygen or nitrogen for our case, which interferes with oxygen's reactions.
+When the oxygen molecule is hit by ultraviolet light, it splits into two oxygen atoms, which can further react with other oxygen molecules with the help of a mediator. The reaction is favorable,
+and the process itself transfers energy to the mediators. Now with the excited mediators flying around (and all the other chaos that's going on), this allows more observed molecules to have more 
+energy (kinetic energy) and so the average kinetic energy of the environment increases. Temperature is (in a basic definition) the measure of average kinetic energy, and so if the 
+average kinetic energy of the molecules increase, then we would expect to see a temperature increase. Reaction (2) is largely responsible for the heating of the stratosphere.  </p>
+
+<p>But then, ozone doesn't go up forever, and indeed, the upper portion of the stratosphere doesn't have as much reactants for rxn (2) to be significantly favorable. With the Chapman
+reactions as a whole diminishing, we see a pattern similar to tropospheric temperature change vs. altitude again. Oh well. This pattern is present throughout the mesosphere.</p>
+
+<p>But of course, you couldn't convince the thermosphere to follow this pattern. In fact, in this layer, temperature can get very, very, very hot here. This is because 
+the radiation from the sun is powerful enough (and by that, the temperature is hot enough) to excite individual molecules so much that their average kinetic energies 
+are highly intense. We won't discuss this a lot here, because the site is mostly limited to tropospheric and stratospheric chemistry.</p>
+
+<p>Since there is not one exact pattern for the whole atmosphere, we only mainly focus on coming up for a formula for the tropospheric pattern of temperature vs. altitude later. Even then,
+deriving that is not simple.</p>
+
+</div>
+
+
+<footer class="footer">
+<p>Made by Benjamin Ueng. 2017.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

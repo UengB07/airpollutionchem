@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>SOME EVEN MORE CHEMISTRY</h1>
+
+<h2>A BRIEF GLIMPSE OF RATES</h2>
+
+<p>We will not spend too much time here, because, these topics will come again when we are working with 
+actual air pollution problems. But still, this is a good preview of tool skills necessary for understanding
+what in the world is going on when it comes to air pollution.</p>
+
+<p>First, we need to understand rates. Rates of reaction, at the very basic level, show how fast reactions go.
+Some reactions go very slow, like the ones that go in rocks to break them down. Others go quite fast, such as
+the burning of paper.</p>
+
+<p>To symbolize the rate of reaction, we write a rule for the chemical reaction. Rules are not the same for all 
+chemical reactions. For instance, you may see a rule (called a rate law) like this:</p>
+
+<p>Rate = k[Reactant 1][Reactant 2]</p>
+
+<p>Or...like this....</p>
+
+<p>Rate = k[Reactant 1]</p>
+
+<p>...etc.</p>
+
+<p>In the first case, there are two reactants reacting with each other to form products. In the second,
+there is only one reactant going through some reaction to form product(s), possibly through light or other
+means.</p>
+
+<p>Another interesting to note is that k. This stands for the rate constant. For this site, the rate constant is 
+measured in units of $\frac{cm^{3}}{molecule\cdot s}$ while the reactant concentration is measured in units 
+of molecules/cm<sup>3</sup>.</p>
+
+<p>We are going be seeing a lot of this in the tropospheric and stratospheric tabs.</p>
+
+<h2>A BRIEF LOOK AT EQUILIBRIUM </h2>
+
+<p>I am not so good at defining chemical equilibrium. It is...basically, the situation where both
+reactant and product concentrations do not change over time. For our reactions when we study 
+acid rain, this concept will be utilized. When we talk about this kind of thing going on, 
+we usually use special (rather odd) arrows.</p>
+
+<p>H<sub>2</sub>CO<sub>3</sub> ⇌ H<sup>+</sup> + HCO<sub>3</sub><sup>-</sup> or in words: </p>
+
+<p>Carbonic Acid ⇌ Hydrogen Ion + Bicarbonate Ion</p>
+
+<p>We'll explore this in the acid rain portion, along with a chemical rule called Henry's Law.</p>
+
+<h2>ENTHALPY/HEAT OF REACTION FOR GASEOUS REACTIONS</h2>
+
+<p>Now, in this section we WILL have to do some practice and pull out a calculator.</p>
+
+<p>We will just be incredibly basic here - this is an air pollution site and not a physical chemistry one, 
+so I am greatly simplifying the understanding of enthalpy. Enthalpy is basically the "heat of reaction at constant pressure", and
+is a way of symbolizing energy gained or released in a chemical reaction. Again - this is not totally 100% accurate,
+but for basic understanding of air pollution, it's good enough. In our scenario, we call the situation when 
+a system in a chemical reaction releases energy --- exothermic. The situation in which a chemical reaction "gains" energy
+is called endothermic. We usually denote the enthalpy as ΔH. How do we know whether a reaction is exothermic or endothermic? In air pollution, one good method 
+(not 100% accurate but usually gets the job done) is using a very interesting mathematical formula. It is this:</p> 
+
+<p>ΔH<sub>reaction</sub><sup>o</sup>=Σn<sub>products</sub>ΔH<sub>products</sub><sup>o</sup> - Σn<sub>reactants</sub>ΔH<sub>reactants</sub><sup>o</sup> (!!)</p>
+
+<p>It's best to see an example on how this works. (If you've already taken general chemistry, this should be a piece of cake for you). </p>
+
+<p>To use this formula for those of you who have no idea what this means, it means 1) to multiply the enthalpy of 
+formation of each reactant by its number of molecules and 2) to multiply the enthalpy of formation of each
+product by its number of molecules and third) subtract 1) from 2). Now some of you are thinking, "I have 
+no idea what this guy just said." It's probably better to see an example. Let's take a look at this question.</p>
+
+<hr />
+<p>EXAMPLE 1:</p>
+<p>The reaction OH + HNO<sub>3</sub> --> H<sub>2</sub>O + NO<sub>3</sub>
+(in words; hydroxyl radical plus nitric acid yields water and nitrate radical) is a significant reaction which 
+can help terminate the hydroxyl (OH) radical, which is largely responsible for advancing pollution in the air.
+Calculate the enthalpy of the reaction. Is it exothermic or endothermic? Make an educated guess on if this 
+reaction happens favorably in nature.</p>
+
+<p>You need to know some information: ΔH<sub>f</sub> of OH is 37,280 J/mol, the ΔH<sub>f</sub> of HNO<sub>3</sub> is
+-134,000 J/mol, ΔH<sub>f</sub> of H<sub>2</sub>O is -241,826 J/mol, and ΔH<sub>f</sub> of NO<sub>3</sub> is 73,700 J/mol.</p>
+
+<p>So, from above, follow 1) and look at the reactants, calculate the reactant form of the equation-->(1)(37,280 J/mol) + 
+(1)(-134,300 J/mol) = (-97,020 J/mol). 2) Look at the products and do the same thing: (1)(-241,826 J/mol) + (1)(73,000 J/mol)
+= -168,126 J/mol. (3) Subtract 1) from 2) --> (-168,126 J/mol) - (-97,020 J/mol) = -71,106 J/mol.</p>
+
+<p>Let's summarize the calculations.</p>
+<p>ΔH<sub>reaction</sub><sup>o</sup>=Σn<sub>products</sub>ΔH<sub>products</sub><sup>o</sup> - Σn<sub>reactants</sub>ΔH<sub>reactants</sub><sup>o</sup></p>
+<p>ΔH<sub>reaction</sub><sup>o</sup> = (-241,826 J/mol + 73,700 J/mol) - (37,280 J/mol + (-134,300 J/mol))</p>
+<p>ΔH<sub>reaction</sub><sup>o</sup> = (-168,126 J/mol) - (-97,020 J/mol)</p>
+<p>ΔH<sub>reaction</sub><sup>o</sup> = -71,106 J/mol.</p>
+
+<p>We usually asscoiate neagtive answers of this type of question with exothermicity. For much of air pollution,
+it is usually safe to assume that exothermic reactions are favorable. WARNING!: This is the case for most of the 
+famous basic air pollution reactions. This might NOT apply to all chemical reactions! For the reactions on this
+site though, and in general air pollution chemistry, we can usually predict negative enthalpies of reaction 
+are favorable in nature. Let's practice some more examples. (Chemistry majors and people who have taken general chemistry,
+you know finding favorable reactions involves thermodynamic calculation of Gibbs free energy and other stuff, this website
+will only go over enthalpy).</p>
+
+<hr />
+
+
+<p>EXAMPLE 2:</p>
+<p>The reaction of the gases OH + SO<sub>2</sub> --> HSO<sub>3</sub> was thought to be an important component of the
+formation of sulfuric acid rain. (Apparently, there's another reaction which is actually the main contributor 
+to acid rain).</p>
+
+<p>Information you need to know: enthalpy associated with OH: 37,280 J/mol, enthalpy associated with SO<sub>2</sub>:
+-296,810 J/mol, and ethalpy asscoiated with HSO<sub>3</sub>: -373,000 J/mol.</p>
+
+<p>Start with the usual:</p>
+<p>ΔH<sub>reaction</sub><sup>o</sup>=Σn<sub>products</sub>ΔH<sub>products</sub><sup>o</sup> - Σn<sub>reactants</sub>ΔH<sub>reactants</sub><sup>o</sup></p>
+<p>ΔH<sub>reaction</sub><sup>o</sup> = (-373,000 J/mol) - (37,280 J/mol - (-296,810 J/mol))</p>
+<p>ΔH<sub>reaction</sub><sup>o</sup> = (-373,000 J/mol) - (-259,530 J/mol)</p>
+<p>ΔH<sub>reaction</sub><sup>o</sup> = -113,470 J/mol</p>
+
+<p>The answer is negative, and the reaction is exothermic and favorable.</p>
+
+
+<hr />
+<h2>LIFETIMES</h2>
+
+<p>When you hear the word "lifetime", this implies many different defintions. The definition we use on this 
+site corresponds to the use of the word in air pollution chemistry. (In other fields, the use of the word
+might mean a different thing). We will define lifetime the time it takes for chemical's concentration 
+to decrease to 37% of its value. This seems like an odd defintion, but it is useful for air pollution studies. Lifetimes do not have one set specific formula for every chemical, but we will
+deal a lot with the case of "psuedo-first order reactions" and "photolysis" reactions. </p>
+
+<p>For an example, one we'll be using a lot is the formula (which we won't derive here) lifetimes
+with reactions involving OH radicals:</p>
+
+<p>$\tau_{other\:chemical} = \frac{1}{k_{OH +\:other\:chemical}[OH]}$ (!!)</p> 
+
+<p>
+This formula usually works for any chemical (as a gas) reacting with the OH radical by itself!</p>
+
+<hr />
+
+<p>EXAMPLE:</p>
+
+<p>The  rate constant of the hydroxyl radical and nitrogen dioxide is about $1\cdot 10^{-13} \frac{cm^{3}}{molecule \cdot s}$
+Assume that the hydroxyl radical concentration is 1.23 x 10<sup>11</sup> molecules/cm<sup>3</sup>. Given this information,
+calculate the lifetime of nitrogen dioxide.</p>
+
+<p>$\tau = \frac{1}{k_{OH + some\:other\:chemical}[OH]}$</p> 
+
+<p>$\tau = \frac{1}{1\cdot 10^{-13} \frac{cm^{3}}{molecule \cdot s}[1.23 \cdot 10^{11} \frac{molecules}{cm^{3}}]}$</p>
+
+<p>The answer is about 0.80 seconds.</p>
+
+<hr />
+
+
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

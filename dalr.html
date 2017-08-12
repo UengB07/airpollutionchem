@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+<div id="gallery">
+<img src ="images/piston.png" />
+</div>
+
+
+<div id="basis">
+
+<h1>DERIVATION OF THE DRY ADIABATIC LAPSE RATE</h1>
+
+<p>Let us define a closed system as one in which the total amount of matter in any phase is kept contant.
+Now, this can take in a certain amount of quantity of heat through conduction or radiation. Let's denote
+this q. Suppose we have a piston which can an amont of work; and the way this piston functions, the 
+internal energy must increase by q - w. Or the change in internal energy = heat - work.</p>
+
+<p>$q - w = u_{2} - u_{1}$</p>
+
+<p>Let's make this difference as infinitesmial as possible.</p>
+
+<p>$dq - dw = du\:(1)$ </p>
+
+<p>If we look at the figure on top of the page, the piston must move a certain distance and work
+must be acted somewhere. work = Force * distance (w = Fx) and:</p> 
+
+<p>$dw = Fdx\:(2) $</p>
+
+<p>Force is equal to Pressure x Area: F = PA, and Adx = dV (a change in volume).</p>
+
+
+<p>$dw=(PA)dx = P(Adx) = P(dV)\:(3)$</p>
+
+<p>We will diverge from some standards and use something called the specific volume v<sub>s</sub>, which
+in our case can replace dV.</p>
+
+<p>$dw = P(dv_{s})\:(4)$</p>
+
+<p>Now we have to define something called the heat capacity of something at constant volume. It is this:</p>
+<p>$c_{v} =  \left(\frac{dq}{dT}\right)_{V\:constant} = \left(\frac{du}{dT}\right)_{V\:constant}\:(5)$</p>
+
+<p>Note we can solve for du, and replace it into equation (1):</p>
+
+<p>$du = (dT)c_{v};\:V\:constant\:(6)$</p>
+
+<p>$dq = c_{v}dT + P(dv_{s})\:(7)$</p>
+
+<p>We also can write a specific heat equation for constant pressure situations:</p>
+
+<p>$c_{P} =  \left(\frac{dq}{dT}\right)_{P\:constant}\:(8)$</p>
+
+<p>We let:</p>
+<p>$P(dv_{s}) = d(P(v_{s})) - (dv_{s})dP\:(9)$</p>
+
+<p>And: plug this Pdv<sub>s</sub> term in Equation (7): </p>
+
+<p>$dq = c_{v}dT + d(Pv_{s}) - v_{s}(dP)\:(10)$ </p>
+
+<p>Also, using the ideal gas law (Pv<sub>s</sub> = RT), we can form the equation:</p>
+
+<p>$(dP)(dv_{s}) = RdT\:(11)$</p>
+
+<p>And plug this back into equation (10):</p>
+
+<p>$dq = c_{v}dT + R(dT) - v_{s}(dP)\:(12)$</p>
+
+<p>At constant pressure, dP = 0;</p>
+
+<p>$dq = c_{v}dT + R(dT) = (c_{v} + R)dT = (c_{p})dT\:(13)$</p>
+
+<p>We define the change in enthalpy (dH) as:</p>
+
+<p>$dH = dq = (c_{p})dT$</p>
+
+<p>It turns out that the change in enthalpy plus the change in geopotential (phi) is equivalent to dq (we won't 
+derive in detail this relationship).</p>
+
+<p>$dq = dH + d\Phi,\:where\:\Phi = (G_{Earth})(m_{Earth})\left(\frac{1}{r}+\frac{1}{r+z}\right)\:(14)$
+</p>
+
+<p>Assume the process is adiabatic and no heat is transferred:</p>
+
+<p>$0 = dH + d\Phi$</p>
+
+<p>$0 = c_{p}(dT) + d\Phi\:(15)$</p>
+
+<p>We can solve for the lapse rate.</p>
+
+<p>$\Gamma_{d} = \frac{dT}{dz} = \frac{g}{c_{p}}\:(16)$</p>
+
+<p>The dry adiabatic lapse rate is about -9.8 C/km (or -10, rounding). </p>
+
+<hr />
+
+<p>The formula for the saturated adiabatic lapse rate is:</p>
+
+<p>$\Gamma_{s} = \frac{\Gamma_{d} }{\left(1+ \frac{L\cdot dq}{c_{p}\cdot dT} \right)}$</p>
+
+<p>How do you think it got this way?</p>
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fundamentals of Air Pollution</title>
+<link href="css/styles.css" type="text/css"
+rel="stylesheet" />
+<link rel="stylesheet" href="css/foundation.css" />
+<link href="css/app.css" type="text/css"
+rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100" rel="stylesheet">
+<script src="js/vendor/foundation.core.js"></script>
+<script src="js/vendor/foundation.dropdownMenu.js"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+
+
+<body>
+
+<ul class = "unorderheader">
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Prerequisites</a>
+<div class="dropdown-menu">
+
+<a href="units.html">Units</a>
+<a href="basicchem.html">Some Basic Chemistry</a>
+<a href="basicchem2.html">Some More Chemistry</a>
+<a href="atmosphere.html">The Atmosphere</a>
+<a href="temperature.html">Temperature Profile</a>
+<a href="pressure.html">Pressure Profile</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Chemistry</a>
+<div class="dropdown-menu">
+
+<a href="troposphere.html">Tropospheric Chemistry</a>
+<a href="stratosphere.html">Stratospheric Chemistry</a>
+<a href="acidrain.html">Acid Rain</a>
+<a href="indoor.html">Indoor Pollution</a>
+</div>
+
+</li>
+
+
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Basic Models</a>
+<div class="dropdown-menu">
+
+<a href="stability.html">Stability</a>
+<a href="winds.html">The Box Model</a>
+<a href="gauss.html">Gaussian Plume</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">Advanced</a>
+<div class="dropdown-menu">
+
+<a href="dalr.html">Dry Adiabatic Lapse Rate</a>
+<a href="hydrostatic.html">Hydrostatic Equation</a>
+</div>
+
+</li>
+
+<li class="dropdown"><a href="#" class="dropdown-btn">About</a>
+<div class="dropdown-menu">
+
+<a href="about.html">About This Site</a>
+</div>
+
+</li>
+
+</ul>
+
+
+<div id="basis">
+
+<h1>STRATOSPHERIC CHEMISTRY</h1>
+
+<h2>FUN WITH RATES</h2>
+
+<p>The stratosphere is an important topic of study due to the presence of ozone, which helps protect us (and 
+other creatures) from ultraviolet radiation. </p>
+
+<p>We begin our study with the Chapman reactions, which was mentioned in the temperature profile section in
+prerequisites:</p>
+
+<ul>
+<li>O<sub>2</sub> + light --> O + O (1)</li>
+<li>O + O<sub>2</sub> + M --> O<sub>3</sub> + M* (2)</li>
+<li>O<sub>3</sub> + light --> O + O<sub>2 </sub>(3)</li>
+<li>O + O<sub>3</sub> --> 2O<sub>2 </sub>(4)</li>
+</ul>
+
+<p>Again, reaction (2) is the main reaction which causes heating in the stratosphere. The "M", which is usually
+either molecular oxygen or nitrogen, obtains energy from the single O atom and oxygen molecule, and the 
+general reaction leads to warming of the stratosphere. Perhaps we could do something similar to what we did 
+with the tropospheric page - make a steady state assumption, set two rates equal to each other, and solve
+for an ozone concentration in the stratosphere. So let's give it a shot.</p>
+
+<p>First, we need to know some rate laws. The corresponding rate laws for each reaction are below:</p>
+
+<ul>
+<li>(1) $Rate_{rxn\:1}=k_{1}[O_{2}]$</li>
+<li>(2) $Rate_{rxn\:2}=k_{2}[O][O_{2}][M]$</li>
+<li>(3) $Rate_{rxn\:3}=k_{3}[O_{3}]$</li>
+<li>(4) $Rate_{rxn\:4}=k_{4}[O][O_{3}]$</li>
+</ul>
+
+<p>We can make a steady-state assumption that the rate of destruction of molecular oxygen (O<sub>2</sub>) 
+is the he same of the rate of formation of molecular oxygen. Reaction (1) destroys oxygen, and reaction (4)
+generates oxygen. So rate of reaction (1) = rate of reaction (4) or: </p>
+
+<p>$k_{1}[O_{2}] = k_{4}[O][O_{3}]$ (5)</p>
+
+
+<p>Another thing we can assume is the rate of destruction of ozone is the same as the rate of formation 
+of ozone. Reaction (3)'s mechanism terminates ozone while reaction (2) creates ozone. Set the rates 
+equal to each other:</p>
+
+<p>$k_{2}[O][O_{2}][M] = k_{3}[O_{3}]$ (6)</p>
+
+<p>From (6), we can also solve individually for the single oxygen atom concentration (isolate [O] on the left side):</p>
+
+$[O]=\frac{k_{3}[O_{3}]}{k_{2}[O_{2}][M]}$ (7)
+
+<p>Plug (7) into the [O] in (5) and do move around some numbers:</p> 
+
+<p>$k_{1}[O_{2}] = k_{4}[O][O_{3}]$ (5)</p>
+
+<p>$k_{1}[O_{2}] = k_{4}\left(\frac{k_{3}[O_{3}]}{k_{2}[O_{2}][M]}\right)[O_{3}]$</p>
+
+<p>$k_{1}[O_{2}] = k_{4}\left(\frac{k_{3}[O_{3}]^{2}}{k_{2}[O_{2}][M]}\right)$</p>
+
+<p>$[O_{3}] = \frac{k_{1}k_{2}[O_{2}]^{2}[M]}{k_{4}k_{3}}$ (8)</p> 
+
+<p>So there's our equation (8) to calculate ozone concentration in the stratosphere!</p>
+
+<p>Too bad it's WRONG.</p>
+
+<p>Why is this? First, there is somewhat of an overestimation of some of the rate constants of the light 
+reactions. But this isn't really as big of a deal as the fact that we cannot calculate ozone using the formulas
+we have constructed. This is because ozone is being lost! Our steady state
+formulas don't work! Something is not accounted for. And of course, we don't want ozone to disappear in
+the stratosphere - otherwise harmful ultraviolet will penetrate through and cause damage to humans. So, now the question is:
+what is the loss process for ozone? Why does ozone disappear in the stratosphere? And this is where we talk about
+the....</p>
+
+<h2>CATALYTIC CYCLES (the bulk and meat of this page)</h2>
+
+<p>We must investigate the destroyers of ozone in the stratosphere. Take a look at the image below. I know what you are 
+thinking.</p>
+
+<p>WHAT IN #@&%*()#&%(#*&#(*&!!! IS THIS?</p>
+
+</div>
+
+<div id="gallery">
+
+<img src="images/stratosphere.png" /> 
+
+</div>
+
+<div id="basis">
+
+<p>Let's go slowly to figure out what's going on, and let's look at each of these in depth.</p>
+
+<h3>Chlorine</h3>
+
+</div>
+
+<div id="gallery">
+
+<img src="images/stratosphere1.png" /> 
+
+</div>
+
+<div id="basis">
+<p>Some years ago, two scientists by the (last) names of Stolarski and Cicerone proposed that chlorine played 
+a role in stratospheric chemistry. They proposed that chlorine interefered with ozone (and "destroyed" it). Indeed, 
+chlorine actually reacts with ozone to form ClO (chlorine monoxide) and molecular oxygen. Also, 
+two scientists by the (last) names of Rowland and Molina proposed that chlorofluorocarbon gases (CFCs) 
+contained the chlorine necessary to initiate the ozone destruction. Let's start to investigate.</p>
+
+<p>Start with the CFC in the green box. The CFC is released from the surface, which is in the troposphere, 
+and is not very active with other compounds. So it just stays the way it is, and enters the stratosphere. 
+Interaction with energetic sun rays (more abundant in the stratosphere) are able to break off a chlorine 
+from the CFC here. The chlorine then reacts with ozone to create chlorine monoxide and molecular oxygen.
+So there's that ozone gone. Now, let's pay attention to the newly formed chlorine monoxide. Look at the 
+ClO in the green circle. This can go two ways - it can react with nitrogen dioxide or with the single O atom.
+Note that the interaction with the O atom regenerates more chlorine, which can further destroy ozone. The only
+main pathway chlorine can be destroyed is by interacting with methane (CH<sub>4</sub>), with generates hydrochloric acid (HCl). Even 
+then, the hydrochloric acid can react with the OH radical to regenerate chlorine. One might see already that 
+chlorine is not easy to get rid of, as there are a few reactions which favor this destroyer of ozone.</p>
+ 
+ 
+<p>Let us investigate further with the cyan dotted line in the figure at the top. We see that chlorine monoxide
+generates reacts with nitrogen dioxide to generate ClONO<sub>2</sub>, which can photolyze to revert back to 
+ClO. In general, the formation of 
+ClONO<sub>2</sub> helps deactivate chlorine, reducing ozone destruction.
+ But...something more interesting happens here - ClONO<sub>2</sub> can undergo another pathway.</p>
+
+<p>Now in the stratosphere, there are clouds which form called polar stratospheric clouds. These are quite cold - they can 
+have a temperature of less than -78 degrees Celsius (-108 degrees Farenheit)! It turns out, the following can 
+happen: the HCl and ClONO<sub>2</sub> react each other on the polar stratospheric cloud's surface:</p>
+
+<div id="gallery">
+
+<img src="images/PSC.png" /> 
+
+</div>
+
+<div id="basis">
+<p>It turns out both HCl and ClONO<sub>2</sub> may deposit on the ice at the polar stratospheric cloud, and
+then a ClONO<sub>2</sub> and HCl undergo a reaction which separates the chlorine atoms fromn the rest of the 
+compounds. Molecular chlorine is formed, and nitric acid (HNO<sub>3</sub>) is generated. (*The nitric acid 
+generally just stays on the PSC ice and doesn't go flying far away from it). Meanwhile, the molecular chlorine
+can undergo photolysis, and then the bond holding the chlorine atoms together break. More chlorine radicals 
+are generated, which can destroy even more ozone. So hopefully you can see there's quite a few pathways 
+for the reformation of chlorine - and the further destruction of ozone.</p>
+
+<p>But we're not done yet (unfortunately) with the methods of chlorine to destroy ozone. It turns out, ClO
+molecules can react with each other in a process called dimerization. The reaction is this: 
+ClO + ClO + M --> Cl<sub>2</sub>O<sub>2</sub> + M. The newly formed Cl<sub>2</sub>O<sub>2</sub> can 
+react with light to form 2 chlorine atoms and an oxygen molecule. In other words,</p>
+
+<ul>
+<li>ClO + ClO + M --> Cl<sub>2</sub>O<sub>2</sub> + M* </li>
+<li>Cl<sub>2</sub>O<sub>2</sub> + light --> 2 Cl + O<sub>2</sub></li>
+</ul>
+
+<p>It turns out that these reactions, combined with the Cl + O<sub>3</sub> --> ClO + O<sub>2</sub> step, generates
+a net reaction of 2O<sub>3</sub> --> 3O<sub>2</sub>. So the ozone gets destroyed - it transfers into 
+molecular oxygen. So we can see when ozone in the stratosphere is getting destroyed, molecular oxygen is 
+generated - but this molecular oxygen doesn't really help us much with protecting from harmful, ultraviolet rays.
+We need that ozone to be protected.</p>
+
+<p>A word about lifetimes:</p>
+
+<p>Chlorine's lifetime can be that of less than a second, while ClO's lifetime 
+is usually a few minutes. So they are quite reactive - and then begins the ozone destruction. Formulas for 
+the lifetimes of Cl and ClO in the stratospheric area of interest are as follows:</p>
+
+<p>$\tau_{Cl} = \frac{1}{k_{chlorine + ozone}[Ozone]}$ (!!)</p>
+
+<p>$\tau_{ClO} = \frac{1}{k_{O + ClO}[O]}$</p>
+
+<p>We explore one last thing. We can define the chain length of being 
+a number which stands for the efficiency of production or destruction of something. The chain length is 
+generally defined as the rate of propagation over the rate of termination. In our case, the rate of 
+propagation is k<sub>O+ClO</sub>[O][ClO] and the rate of termination is k<sub>methane + Cl</sub>[Cl][CH<sub>4</sub>].
+So: </p>
+
+<p>$Chain\:Length = \frac{Rate\:of\:Propagation}{Rate\:of\:Termination}$ (!!)</p>
+
+<p>$Chain\:Length = \frac{k_{O+ClO}[O][ClO]}{k_{methane + Cl}[Cl][CH_{4}]}$ (!)</p>
+
+<p>It turns out that the chain length for this process was found to be approximately 20,000. This is very 
+efficient for destroying ozone.</p>
+
+<h3>Bromine</h3>
+
+</div>
+
+<div id="gallery">
+<img src="images/stratosphere2.png" />
+</div>
+
+<div id="basis">
+<p>Bromine is a compound that undergoes almost similar reactions. A bromine containing compound (usually a halon)
+travels to the stratosphere; once there, gets its bond broken by light, and now a bromine atom roams freely
+until it interacts with ozone, yielding a BrO atom and an oxygen molecule. BrO usually reacts with O to revert
+to bromine, but it can also react with nitrogen dioxide to form BrONO<sub>2</sub>, which can then undergo 
+photolysis to revert back to BrO. Bromine is terminated mainly NOT by methane, but rather, our lovely 
+hydroperoxyl radical (HO<sub>2</sub>) to from hydrogen bromide. HBr then deposits somewhere. As usual, 
+ozone gets eaten up by something - in this case, bromine. There is no major regeneration of ozone.</p>
+
+<h3>Flourine?</h3>
+
+<p>If you are in chemistry, you should know or learn that in the periodic table, elements in the same group should exhibit the same 
+reactive properties (in general). So we covered bromine, we covered chlorine, and ah! - what about flourine? It's 
+in the same group as the other two. Would it be a good eater of ozone?</p>
+
+<p>It is not.</p>
+
+<p>Why? This is because flourine reacts with methane about 1,000 times more rapidly than 
+it does with chlorine! So it terminates quite quickly - it prefers "eating" methane over ozone. Indeed, 
+it seems that the reaction of F + CH<sub>4</sub> --> HF + CH<sub>3</sub> is so much more favorable than 
+the F + O<sub>3</sub> --> FO + O<sub>2</sub> reaction. Try it yourself - calculate the enthalpies of reaction you
+learned from the Some More Chemistry page in the prerequisites section. You will see that flourine likes methane better.
+Also, the chain length of the flourine cycle is almost about 10 - compare that with 20,000 to the chlorine cycle. </p>
+
+<hr />
+
+<p>EXPLORATION:</p>
+
+<p>It seems that the reaction of F + CH<sub>4</sub> --> HF + CH<sub>3</sub> is so much more favorable than the F + O<sub>3</sub> --> FO + O<sub>2</sub> reaction. Try it yourself - calculate the enthalpies of these reactions. You learned the process from Some More Chemistry page in the prerequisites section.
+You can do the same for the bromine reaction with ozone, the hydroperoxyl radical, and methane (for methane, you should see that the reaction is not favorable).</p>
+
+<hr />
+
+<h3>Nitric Oxide</h3>
+
+
+</div>
+
+<div id="gallery">
+<img src="images/stratosphere3.png" />
+</div>
+
+<div id="basis">
+<p>Some years ago (yes, I know I use this phrase quite a bit), a person named Paul Crutzen proposed that nitric oxide 
+could be interefering with stratospheric chemistry (or playing a role, for better terms). Indeed, he was right. 
+A compound called nitrous oxide (N<sub>2</sub>O) can come from agricultural activity and the soils (some also 
+comes from industrial processes). This nitrous oxide can react with a single oxygen atom to form 2 NO molecules. 
+The NO molecule can then react with ozone (starting to see a pattern on termination of ozone?) and create 
+nitrogen dioxide and molecular oxygen. So again, a poor ozone is eaten up. The nitrogen dioxide can react with the
+OH radical to form nitric acid, but at the same time, nitric acid can undergo photolysis to generate nitrogen 
+dixoide again. Nitrogen dixoide finally reacts with O to form NO.</p>
+
+<h3>Hydroxyl Radical</h3>
+
+</div>
+
+<div id="gallery">
+<img src="images/stratosphere4.png" />
+</div>
+
+<div id="basis">
+<p>The hydroxyl radical was a key player in tropospheric chemistry. And now it's coming to the stratosphere! 
+Turns out, methane can react with an O atom to generate OH radicals in the stratosphere. Once there,
+it's business as usual, it reacts with ozone to generate oxygen and a hydroperoxyl radical. The hydroperoxyl
+radical may react with nitrogen dioxide to form a somewhat unusual compound. Anyway, you will see a weird
+HO-2-NO2 next to each other and some weird letters "hv". Pay no attention to this area - just know that 
+hydroperoxyl radicals here could react with nitrogen dioxide. It is more important to focus on how OH gets 
+terminated. OH + nitrogen dioxide will yield nitric acid. This is more complicated than the others, but 
+the key is that OH can eat up ozone. It's not as intense as chlorine, and the reactions may be a bit weird in 
+this cycle, but OH is an ozone destroyer. It can be a bit of an odd but significant process nonetheless.</p>
+
+<h3>A COMMON THEME</h3>
+<p>Now! Let's go back to the picture back near the "CATALYTIC CYCLES (the bulk and meat of this page)" title. 
+Pay attention to the purple dotted areas in the picture. They all have one thing in common. What do we mean by this?
+Let's write down reactions which occur in the purple dotted section.</p>
+
+<ul>
+<li>&nbsp;Cl + O<sub>3</sub> --> ClO + O<sub>2</sub></li>
+<li>+ClO + O --> Cl + O<sub>2</sub></li>
+<li>__________________________________</li>
+<li>O + O<sub>3</sub> --> 2O<sub>2</sub> (SUM)</li>
+</ul>
+
+<ul>
+<li>&nbsp;Br + O<sub>3</sub> --> BrO + O<sub>2</sub></li>
+<li>+BrO + O --> Br + O<sub>2</sub></li>
+<li>__________________________________</li>
+<li>O + O<sub>3</sub> --> 2O<sub>2</sub> (SUM)</li>
+</ul>
+
+<ul>
+<li>&nbsp;NO + O<sub>3</sub> --> NOO + O<sub>2</sub></li>
+<li>+NOO + O --> NO + O<sub>2</sub></li>
+<li>__________________________________</li>
+<li>O + O<sub>3</sub> --> 2O<sub>2</sub> (SUM)</li>
+</ul>
+
+<ul>
+<li>&nbsp;OH + O<sub>3</sub> --> HO<sub>2</sub> + O<sub>2</sub></li>
+<li>+HO<sub>2</sub> + O --> OH + O<sub>2</sub></li>
+<li>__________________________________</li>
+<li color="red">O + O<sub>3</sub> --> 2O<sub>2</sub> (SUM)</li>
+
+<li>Sums are all the same reaction!!!</li>
+</ul>
+
+<p>In all these, you get something that interacts then comes back. Chlorine enters the reaction with ozone,
+and then emerges out at the end. Bromine enters the reaction with ozone, and then emerges out at the end.
+Nitric oxide enters...you get the idea. The point is, the sum or the net reaction is the same for all 
+of the cases! One ozone should get destroyed. But as we will see later, at high latitudes, (near the poles), 
+these reactions don't work very well - there is insufficient energy to form O atoms from the 
+Chapman reactions.</p>
+
+<p>And just like the tropospheric section, there's another catch. Let's say we increase the amount of NO in
+the stratosphere. Then it should destroy ozone right? But let's go back to part (1) with all the chlorine. 
+Remember, we said the reaction Cl + NO<sub>2</sub> --> ClONO<sub>2</sub> generally hinders ozone destruction. 
+Note that nitrogen dioxide is in this equation. Increasing NO means increasing nitrogen dioxide, hence a
+decrease in ozone destruction at the chlorine cycle. But an ozone is still being destroyed in the NO cycle.
+It turns out that actually increasing NO can reduce ozone destruction in the chlorine cycle (considering 
+the polar stratospheric cloud reactions aren't super abundant and generate a lot of chlorine atoms). We have 
+to remember that all parts interact, and nature is complex. In general, chlorine in the stratosphere is 
+the #1 thing we should focus efforts on.</p>
+
+
+<h2>THE OZONE HOLE</h2>
+
+<p>At high latitudes, the catalytic reactions we said don't work because there isn't enough energy 
+to break oxygen atoms and generate single O atoms, which are needed for these reactions to work. 
+<u>It is the dimerization process mentioned in the chlorine section which allows the formation of single 
+chlorine atoms and destruction of ozone (go back to the chlorine section to remind yourself).</u> Note 
+that O atoms are not required in this dimerization process. The breaking of ClO doesn't require 
+as much energy. Combine this with polar the reactions we discussed in polar stratospheric clouds, which 
+grow quite active during inside a phenomenon called the polar vortex (which usually happens at the poles, mind
+you). The reactions in the PSCs as well as dimerization yields a deadly combination of ozone destruction. Many
+Cl atoms get generated and eat up ozone. Suddenly, the ozone near the stratospheric portion of the pole drops, 
+and an ozone hole forms. Meterological/climatological conditions lead to the hole forming during certain times of 
+the year because of polar vortexes, ClO building up, and the existence of polar stratospheric clouds.</p>
+
+<p>Like tropospheric chemistry, stratospheric chemistry is a complex and varied field. There's a lot going on -
+more than what we discussed on this page. But these are the fundamentals - or so I hope But -<u>MAIN POINT:
+the main pathway of ozone destruction in Antarctica is ClO dimerization, along with the meterological 
+conditions (polar vortex and polar stratospheric clouds). ClO comes mostly from chlorine which humans 
+emit (i.e. CFCs).</u></p>
+
+<p>EXPLORATION - NASA has a page called Ozone Watch. Go ahead and explore it, and find out what (1) a Dobson
+unit is, (2) read NASA's explaination of the ozone hole and when it forms, and (3) what it looks like 
+on different days/times of year. Why do you think it's a much bigger deal in the Antarctic vs. the Arctic?
+Also, research the polar vortex. </p>
+
+</div>
+
+
+
+</div>
+
+<footer class="footer">
+<p>Webpage made by Benjamin Ueng. 2017. Credit goes to him.</p>
+</footer>
+
+
+<script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/what-input.min.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+</body>
+
+</html>
